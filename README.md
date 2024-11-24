@@ -1,1 +1,1 @@
-#Task -> Must use LiveData for getting user data
+This is MVP App of online professional profile.
