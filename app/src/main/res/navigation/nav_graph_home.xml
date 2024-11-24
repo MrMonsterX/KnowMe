@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/graphSearchFragment">
+
+    <fragment
+        android:id="@+id/graphProfileFragment"
+        android:name="com.madinaappstudio.knowme.fragments.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+
+        <action
+            android:id="@+id/actionProfileToPersonal"
+            app:destination="@id/graphPersonalFragment" />
+        <action
+            android:id="@+id/actionProfileToQualification"
+            app:destination="@id/graphQualificationFragment" />
+        <action
+            android:id="@+id/actionProfileToCertificate"
+            app:destination="@id/graphCertificateFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/graphPersonalFragment"
+        android:name="com.madinaappstudio.knowme.fragments.PersonalFragment"
+        android:label="PersonalFragment"
+        tools:layout="@layout/fragment_personal">
+
+        <action
+            android:id="@+id/actionPersonalToEditPersonal"
+            app:destination="@id/graphEditPersonalFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/graphQualificationFragment"
+        android:name="com.madinaappstudio.knowme.fragments.QualificationFragment"
+        android:label="QualificationFragment"
+        tools:layout="@layout/fragment_qualification">
+
+        <action
+            android:id="@+id/actionQualificationToEditQualification"
+            app:destination="@id/graphEditQualificationFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/graphCertificateFragment"
+        android:name="com.madinaappstudio.knowme.fragments.CertificateFragment"
+        android:label="CertificateFragment"
+        tools:layout="@layout/fragment_certificate"/>
+
+    <fragment
+        android:id="@+id/graphEditPersonalFragment"
+        android:name="com.madinaappstudio.knowme.fragments.EditPersonalFragment"
+        android:label="EditPersonalFragment"
+        tools:layout="@layout/fragment_edit_personal"/>
+
+    <fragment
+        android:id="@+id/graphEditQualificationFragment"
+        android:name="com.madinaappstudio.knowme.fragments.EditQualificationFragment"
+        android:label="EditQualificationFragment"
+        tools:layout="@layout/fragment_edit_qualification"/>
+
+    <fragment
+        android:id="@+id/graphSearchFragment"
+        android:name="com.madinaappstudio.knowme.fragments.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search">
+
+        <action
+            android:id="@+id/actionSearchToProfileView"
+            app:destination="@id/graphProfileViewFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/graphProfileViewFragment"
+        android:name="com.madinaappstudio.knowme.fragments.ProfileViewFragment"
+        android:label="ProfileViewFragment"
+        tools:layout="@layout/fragment_profile_view">
+        <argument
+            android:name="userUid"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/graphSettingsFragment"
+        android:name="com.madinaappstudio.knowme.fragments.SettingsFragment"
+        android:label="fragmentSettings"
+        tools:layout="@layout/fragment_settings"/>
+
+</navigation>

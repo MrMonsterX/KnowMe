@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/graphSignInFragment">
+
+    <fragment
+        android:id="@+id/graphSignInFragment"
+        android:name="com.madinaappstudio.knowme.auth.SignInFragment">
+
+        <action
+            android:id="@+id/actionSignInToSignUp"
+            app:destination="@id/graphSignUpFragment" />
+        <action
+            android:id="@+id/actionSignInToSetUsername"
+            app:destination="@id/graphSetUsernameFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/graphSignUpFragment"
+        android:name="com.madinaappstudio.knowme.auth.SignUpFragment">
+
+        <action
+            android:id="@+id/actionSignUpToSignIn"
+            app:destination="@id/graphSignInFragment" />
+        <action
+            android:id="@+id/actionSignUpToSignSetUsername"
+            app:destination="@id/graphSetUsernameFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/graphSetUsernameFragment"
+        android:name="com.madinaappstudio.knowme.auth.SetUsernameFragment"
+        android:label="SetUsernameFragment" >
+
+        <argument
+            android:name="flag"
+            app:argType="boolean"
+            android:defaultValue="false"/>
+    </fragment>
+
+</navigation>

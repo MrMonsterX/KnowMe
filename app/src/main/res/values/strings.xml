@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">KnowMe</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="str_search">Search</string>
+    <string name="no_file_chosen">No file chosen</string>
+</resources>
